@@ -5,14 +5,7 @@ let total = 0;
 
 $('.activities').on('click', function(e){
   // if Main Conference box is checked
-  if($('input[name="all"]:checked').length !== 0){
-    // alert("a");
-    total = total + 200;
-  }
-  else {
-    total = total;
-  }
-
+              
   //JavaScript Frameworks
   if($('input[name="js-frameworks"]:checked').length !== 0){
 
