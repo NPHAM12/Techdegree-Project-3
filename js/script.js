@@ -59,7 +59,6 @@ else {
 // Node.js Workshop
 if($('input[name="node"]:checked').length !== 0){
   // alert("b");
-  total = total + 100;
   $('input[name="js-libs"]').attr('disabled', true);
   $('input[name="js-libs"]').parent().css('color', 'grey');
 
@@ -72,5 +71,4 @@ else {
 
   $('input[name="npm"]').attr('disabled', false);
   $('input[name="npm"]').parent().css('color', 'black');
-  total = total;
 }
