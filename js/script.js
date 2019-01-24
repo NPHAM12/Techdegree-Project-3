@@ -1,7 +1,4 @@
 //”REGISTER FOR ACTIVITIES” SECTION
-const $p = $('<h4 id="total"> <h4>');
-$(".activities").append($p); // insert Total to activities section
-let total = 0;
 
 $('.activities').on('click', function(e){
   // if Main Conference box is checked
@@ -56,6 +53,8 @@ else {
   $('input[name="npm"]').parent().css('color', 'black');
 }
 
+
+
 // Node.js Workshop
 if($('input[name="node"]:checked').length !== 0){
   // alert("b");
@@ -72,3 +71,38 @@ else {
   $('input[name="npm"]').attr('disabled', false);
   $('input[name="npm"]').parent().css('color', 'black');
 }
+
+// Build tools Workshop
+if($('input[name="build-tools"]:checked').length !== 0){
+  // alert("b");
+  $('input[name="js-frameworks"]').attr('disabled', true);
+  $('input[name="js-frameworks"]').parent().css('color', 'grey');
+
+  $('input[name="express"]').attr('disabled', true);
+  $('input[name="express"]').parent().css('color', 'grey');
+}
+else {
+  $('input[name="js-frameworks"]').attr('disabled', false);
+  $('input[name="js-frameworks"]').parent().css('color', 'black');
+
+  $('input[name="express"]').attr('disabled', false);
+  $('input[name="express"]').parent().css('color', 'black');
+}
+
+// npm Workshop
+if($('input[name="npm"]:checked').length !== 0){
+  // alert("b");
+  $('input[name="js-libs"]').attr('disabled', true);
+  $('input[name="js-libs"]').parent().css('color', 'grey');
+
+  $('input[name="node"]').attr('disabled', true);
+  $('input[name="node"]').parent().css('color', 'grey');
+}
+else {
+  $('input[name="js-libs"]').attr('disabled', false);
+  $('input[name="js-libs"]').parent().css('color', 'black');
+
+  $('input[name="node"]').attr('disabled', false);
+  $('input[name="node"]').parent().css('color', 'black');
+}
+});
