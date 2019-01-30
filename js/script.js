@@ -309,7 +309,8 @@ $(document).ready(function() {
         }
       }
     }
-    if (!confirm('Are you sure that you want to submit the form'))
+    if (!confirm('Would you like to submit the application?')){
       e.preventDefault();
+    }
   });
 });
