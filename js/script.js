@@ -4,8 +4,8 @@ FSJS project 3 - Build an Interactive Form
 Exceeds Expectations
 Nguyen Pham
 ******************************************/
-/*Set focus on the first text field*/
-//When the page first loads, the first text field should be in focus by default.
+//Set focus on the first text field
+//When the page loads, the name text field should be in focus by default.
 $(document).ready(function() {
   $('#name').focus();
 
