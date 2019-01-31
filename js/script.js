@@ -135,7 +135,7 @@ $(document).ready(function() {
   
   // credit card payment is default
   $('#credit-card').show();
-  $('#payment option[value="credit card"]').prop('selected', true)
+  $('#payment option[value="credit card"]').prop('selected', true);
 
   // Show Payment Information
   $('#payment').change(function() {
