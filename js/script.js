@@ -132,8 +132,12 @@ $(document).ready(function() {
   $('#payment option[value="select_method"]').hide();
   $('div p:contains("PayPal")').hide();
   $('div p:contains("Bitcoin")').hide();
+  
   // credit card payment is default
   $('#credit-card').show();
+  $('#payment option[value="credit card"]').prop('selected', true)
+
+  // Show Payment Information
   $('#payment').change(function() {
     //Credit card Option
     // if($(this).val() === "credit card"){}
@@ -267,7 +271,7 @@ $(document).ready(function() {
     //Check all requirements at first
     if (!checkName()) {
       e.preventDefault();
-      addNote($('#name'), "Name should NOT be a number or empty!");
+      addNote($('#name'), "Name should NOT be a number or blank!");
     }
     if (!checkEmail()) {
       e.preventDefault()
@@ -309,8 +313,9 @@ $(document).ready(function() {
         }
       }
     }
-    if (!confirm('Would you like to submit the application?')){
+    if (!confirm('Would you like to submit the application?')) {
       e.preventDefault();
     }
+
   });
 });
